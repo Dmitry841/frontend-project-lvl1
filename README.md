@@ -5,7 +5,7 @@
 <a href="https://codeclimate.com/github/codeclimate/codeclimate/test_coverage"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage" /></a>
 
 
-https://github.com/Dmitry841/frontend-project-lvl1/blob/master/.github/workflows/main.yml/badge.svg
+![]https://github.com/Dmitry841/frontend-project-lvl1/blob/master/.github/workflows/main.yml/badge.svg
 
 
 
