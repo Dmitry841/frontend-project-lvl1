@@ -6,3 +6,11 @@
 
 
 https://github.com/Dmitry841/frontend-project-lvl1/blob/master/.github/workflows/main.yml/badge.svg
+
+
+
+## Run lint
+
+```sh
+$ make lint
+```
