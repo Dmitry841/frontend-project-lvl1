@@ -7,11 +7,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
-    steps:
-    - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
-      run: |
-        make lint
     
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install package
+      run: make install
+    - name: Run linter
+      run: make lint
