@@ -1,7 +1,7 @@
 {
   "name": "frontend-project-lvl1",
   "version": "1.0.0",
-  "description": "",
+  "description": "<a href=\"https://codeclimate.com/github/codeclimate/codeclimate/maintainability\"><img src=\"https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability\" /></a>",
   "main": "src/index.js",
   "type": "module",
   "scripts": {
@@ -21,6 +21,9 @@
     "brain-games": "bin/brain-games.js"
   },
   "dependencies": {
+    "eslint": "^7.8.1",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
     "readline-sync": "^1.4.10"
   }
 }
