@@ -19,8 +19,7 @@ const toCalculate = () => {
     resultOfCalculate.push(String(randomNumber1 * randomNumber2),
       `${randomNumber1} * ${randomNumber2}`);
   }
-  console.log(typeof resultOfCalculate[0]);
   return resultOfCalculate;
 };
 
-runGame(task, toCalculate);
+export default () => runGame(task, toCalculate);

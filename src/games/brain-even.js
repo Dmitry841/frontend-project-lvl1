@@ -13,4 +13,4 @@ const random = () => {
   return result;
 };
 
-runGame(task, random);
+export default () => runGame(task, random);

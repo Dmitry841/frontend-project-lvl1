@@ -19,7 +19,8 @@
   "homepage": "https://github.com/Dmitry841/frontend-project-lvl1#readme",
   "bin": {
     "brain-games": "bin/brain-games.js",
-    "brain-even": "bin/brain-even.js"
+    "brain-even": "bin/brain-even.js",
+    "brain-calc": "bin/brain-calc.js"
   },
   "dependencies": {
     "Math": "0.0.1-security",

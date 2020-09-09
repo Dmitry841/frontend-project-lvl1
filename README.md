@@ -7,3 +7,7 @@
 [![Node CI](https://github.com/Dmitry841/frontend-project-lvl1/workflows/Node%20CI/badge.svg)](https://github.com/Dmitry841/frontend-project-lvl1/actions)
 
 [![asciicast](https://asciinema.org/a/uQn0G19oCBRFkktJ5AHRyR6CR.svg)](https://asciinema.org/a/uQn0G19oCBRFkktJ5AHRyR6CR)
+
+[![asciicast](https://asciinema.org/a/1HqfhK5plXRmymmCk5vuU0spN.svg)](https://asciinema.org/a/1HqfhK5plXRmymmCk5vuU0spN)
+
+https://asciinema.org/a/1HqfhK5plXRmymmCk5vuU0spN
