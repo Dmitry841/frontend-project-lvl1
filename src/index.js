@@ -3,7 +3,7 @@ import { greeting, enterName } from './cli.js';
 
 greeting();
 
-export const toGenerateRandomNumber = () => Math.floor(Math.random() * 100);
+export const toGenerateRandomNumber = () => Math.floor(Math.random() * 20 + 1);
 
 export const runGame = (task, expression) => {
   console.log(task);
