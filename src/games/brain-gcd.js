@@ -18,7 +18,7 @@ const commonDividers = (arrOfDiv1, arrOfDiv2) => {
   return commomDiv;
 };
 
-const toGenerateGCD = () => { 
+const toGenerateGCD = () => {
   const resultAndQuestion = [];
   const number1 = toGenerateRandomNumber();
   const number2 = toGenerateRandomNumber();
