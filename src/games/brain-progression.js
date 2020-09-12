@@ -4,8 +4,9 @@ const task = 'What number is missing in the progression?';
 const toGenerateNumericalSeries = () => {
   const firstNumber = toGenerateRandomNumber();
   const Series = [firstNumber];
-  for (let i = 0; i < 9; i += 1) {
-    Series.push(Series[i] + 5);
+  const stepOfProgression = 5;
+  for (let ElementOfSeries = 0; ElementOfSeries < 9; ElementOfSeries += 1) {
+    Series.push(Series[ElementOfSeries] + stepOfProgression);
   }
   return Series;
 };
@@ -15,7 +16,9 @@ const toGenerateRandomIndex = (min, max) => Math.floor(Math.random() * (max - mi
 const toGenerateProgression = () => {
   const resulAndAnswer = [];
   const progression = toGenerateNumericalSeries();
-  const hiddenIndex = toGenerateRandomIndex(0, 9);
+  const firstIndexOfSeris = 0;
+  const LastIndexOfSeries = 9;
+  const hiddenIndex = toGenerateRandomIndex(firstIndexOfSeris, LastIndexOfSeries);
   const copyOfProgression = progression.slice();
   copyOfProgression[hiddenIndex] = '..';
   const toShowProgression = copyOfProgression.join(' ');
@@ -24,4 +27,3 @@ const toGenerateProgression = () => {
 };
 
 export default () => runGame(task, toGenerateProgression);
-
