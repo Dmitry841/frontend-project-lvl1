@@ -3,7 +3,6 @@ import { toGenerateRandomNumber, runGame } from '../index.js';
 const task = 'What is the result of the expression?';
 
 const toCalculate = () => {
- 
   const sign = ['+', '-', '*'];
   const resultOfCalculate = [];
   const toGenerateRandomSign = (min, max) => Math.floor(Math.random() * (max - min + 1) + 1);
