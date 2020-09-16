@@ -10,7 +10,7 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Install package
+    - name: Dmitry841
       run: make install
     - name: Run linter
       run: make lint
