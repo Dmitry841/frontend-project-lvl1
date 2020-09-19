@@ -1,8 +1,9 @@
-import { toGenerateRandomNumber, runGame } from '../index.js';
+import runGame from '../index.js';
+import GenerateRandomNumber from '../utils.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
 
-const tofindAllDividerS = (num) => {
+const findAllDividerS = (num) => {
   let div = 1;
   const dividers = [];
   while (div <= num) {
@@ -18,14 +19,16 @@ const commonDividers = (arrOfDiv1, arrOfDiv2) => {
   return commomDiv;
 };
 
-const toGenerateGCD = () => {
+const GenerateGCD = () => {
   const resultAndQuestion = [];
-  const number1 = toGenerateRandomNumber();
-  const number2 = toGenerateRandomNumber();
-  const divOfNumber1 = tofindAllDividerS(number1);
-  const divOfNumber2 = tofindAllDividerS(number2);
+  const lowerRange = 5;
+  const upperRange = 50;
+  const number1 = GenerateRandomNumber(lowerRange, upperRange);
+  const number2 = GenerateRandomNumber(lowerRange, upperRange);
+  const divOfNumber1 = findAllDividerS(number1);
+  const divOfNumber2 = findAllDividerS(number2);
   const divOfBothNumbers = commonDividers(divOfNumber1, divOfNumber2);
   resultAndQuestion.push(String(Math.max(...divOfBothNumbers)), `${number1}, ${number2}`);
   return resultAndQuestion;
 };
-export default () => runGame(task, toGenerateGCD);
+export default () => runGame(task, GenerateGCD);

@@ -1,24 +1,28 @@
-import { toGenerateRandomNumber, runGame } from '../index.js';
+import runGame from '../index.js';
+import GenerateRandomNumber from '../utils.js';
 
 const task = 'What number is missing in the progression?';
-const toGenerateNumericalSeries = () => {
-  const firstNumber = toGenerateRandomNumber();
+
+const firstIndexOfSeries = 0;
+const lastIndexOfSeries = 9;
+
+const GenerateNumericalSeries = () => {
+  const lowerRange = 5;
+  const upperRange = 50;
+  const firstNumber = GenerateRandomNumber(lowerRange, upperRange);
   const Series = [firstNumber];
   const stepOfProgression = 5;
-  for (let ElementOfSeries = 0; ElementOfSeries < 9; ElementOfSeries += 1) {
+  for (let ElementOfSeries = firstIndexOfSeries;
+    ElementOfSeries < lastIndexOfSeries; ElementOfSeries += 1) {
     Series.push(Series[ElementOfSeries] + stepOfProgression);
   }
   return Series;
 };
 
-const toGenerateRandomIndex = (min, max) => Math.floor(Math.random() * (max - min + 1) + 1);
-
-const toGenerateProgression = () => {
+const GenerateProgression = () => {
   const resulAndAnswer = [];
-  const progression = toGenerateNumericalSeries();
-  const firstIndexOfSeris = 0;
-  const LastIndexOfSeries = 9;
-  const hiddenIndex = toGenerateRandomIndex(firstIndexOfSeris, LastIndexOfSeries);
+  const progression = GenerateNumericalSeries();
+  const hiddenIndex = GenerateRandomNumber(firstIndexOfSeries, lastIndexOfSeries);
   const copyOfProgression = progression.slice();
   copyOfProgression[hiddenIndex] = '..';
   const toShowProgression = copyOfProgression.join(' ');
@@ -26,4 +30,4 @@ const toGenerateProgression = () => {
   return resulAndAnswer;
 };
 
-export default () => runGame(task, toGenerateProgression);
+export default () => runGame(task, GenerateProgression);
