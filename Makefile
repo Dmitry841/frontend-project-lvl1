@@ -8,3 +8,5 @@ publish:
 	npm publish --dry-run
 lint:
 	eslint .
+node:
+	node -v
