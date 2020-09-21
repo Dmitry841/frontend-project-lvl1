@@ -7,6 +7,6 @@ brain-even:
 publish:
 	npm publish --dry-run
 lint:
-	eslint .
+	npx eslint .
 node:
 	node -v
