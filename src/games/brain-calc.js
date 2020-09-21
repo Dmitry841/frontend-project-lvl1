@@ -3,7 +3,6 @@ import GenerateRandomNumber from '../utils.js';
 
 const task = 'What is the result of the expression?';
 
-
 const generateCalculate = () => {
   const sign = ['+', '-', '*'];
   const CalculateAndAnswer = [];
