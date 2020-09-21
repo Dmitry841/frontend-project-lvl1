@@ -1,4 +1,4 @@
-name: Node CI
+name: NODE CI
 
 on: [push]
 
@@ -7,10 +7,10 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    
     steps:
     - uses: actions/checkout@v1
     - name: Install package
       run: make install
     - name: Run linter
       run: make lint
-      
