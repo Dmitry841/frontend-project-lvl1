@@ -7,9 +7,9 @@ const isEven = (num) => num % 2 === 0;
 
 const generateData = () => {
   const resultAndAnswer = [];
-  const lowerRange = 1;
-  const upperRange = 30;
-  const randomNumber = GenerateRandomNumber(lowerRange, upperRange);
+  const beginRange = 1;
+  const endRange = 30;
+  const randomNumber = GenerateRandomNumber(beginRange, endRange);
   const result = isEven(randomNumber) ? 'yes' : 'no';
   resultAndAnswer.push(result, randomNumber);
   return resultAndAnswer;
