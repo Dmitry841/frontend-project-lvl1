@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import GenerateRandomNumber from '../utils.js';
+import getRandomInt from '../utils.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
 
@@ -23,8 +23,8 @@ const GenerateGCD = () => {
   const resultAndQuestion = [];
   const lowerRange = 5;
   const upperRange = 50;
-  const number1 = GenerateRandomNumber(lowerRange, upperRange);
-  const number2 = GenerateRandomNumber(lowerRange, upperRange);
+  const number1 = getRandomInt(lowerRange, upperRange);
+  const number2 = getRandomInt(lowerRange, upperRange);
   const divOfNumber1 = findAllDividerS(number1);
   const divOfNumber2 = findAllDividerS(number2);
   const divOfBothNumbers = commonDividers(divOfNumber1, divOfNumber2);

@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import GenerateRandomNumber from '../utils.js';
+import getRandomInt from '../utils.js';
 
 const task = 'What number is missing in the progression?';
 
@@ -9,7 +9,7 @@ const lastIndexOfSeries = 9;
 const GenerateNumericalSeries = () => {
   const lowerRange = 5;
   const upperRange = 50;
-  const firstNumber = GenerateRandomNumber(lowerRange, upperRange);
+  const firstNumber = getRandomInt(lowerRange, upperRange);
   const Series = [firstNumber];
   const stepOfProgression = 5;
   for (let ElementOfSeries = firstIndexOfSeries;
@@ -22,7 +22,7 @@ const GenerateNumericalSeries = () => {
 const GenerateProgression = () => {
   const resulAndAnswer = [];
   const progression = GenerateNumericalSeries();
-  const hiddenIndex = GenerateRandomNumber(firstIndexOfSeries, lastIndexOfSeries);
+  const hiddenIndex = getRandomInt(firstIndexOfSeries, lastIndexOfSeries);
   const copyOfProgression = progression.slice();
   copyOfProgression[hiddenIndex] = '..';
   const toShowProgression = copyOfProgression.join(' ');

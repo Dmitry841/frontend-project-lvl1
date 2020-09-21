@@ -1,5 +1,5 @@
 import runGame from '../index.js';
-import GenerateRandomNumber from '../utils.js';
+import getRandomInt from '../utils.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -17,7 +17,7 @@ const generateData = () => {
   const resultAndAnswer = [];
   const lowerRange = 5;
   const upperRange = 50;
-  const randomNumber = GenerateRandomNumber(lowerRange, upperRange);
+  const randomNumber = getRandomInt(lowerRange, upperRange);
   const result = isPrimeNumber(randomNumber) ? 'yes' : 'no';
   resultAndAnswer.push(result, randomNumber);
   return resultAndAnswer;
