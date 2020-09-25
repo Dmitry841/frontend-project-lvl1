@@ -13,10 +13,11 @@ const isPrimeNumber = (num) => {
   } return true;
 };
 
+const lowerRange = 5;
+const upperRange = 50;
+
 const generateData = () => {
   const resultAndAnswer = [];
-  const lowerRange = 5;
-  const upperRange = 50;
   const randomNumber = getRandomInt(lowerRange, upperRange);
   const result = isPrimeNumber(randomNumber) ? 'yes' : 'no';
   resultAndAnswer.push(result, randomNumber);
