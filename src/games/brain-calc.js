@@ -5,12 +5,12 @@ const task = 'What is the result of the expression?';
 
  const minNumber = 1;
  const maxNumber = 10;
- const sign = ['+', '-', '*'];
+ const signs = ['+', '-', '*'];
 
 const generateData = () => {
-  const beginOfSign = sign[0]; // я думаю, что эта константа отностся к лексическому контексту.
-  const endOfSign = sign[sign.length - 1];   // я думаю, что эта константа отностся к лексическому контексту.
-  const RandomSign = sign[getRandomInt(beginOfSign, endOfSign)];
+  const beginOfSign = signs[0]; // я думаю, что эта константа отностся к лексическому контексту.
+  const endOfSign = signs[sign.length - 1];   // я думаю, что эта константа отностся к лексическому контексту.
+  const RandomSign = signs[getRandomInt(beginOfSign, endOfSign)];
   const randomNumber1 = getRandomInt(minNumber, maxNumber);
   const randomNumber2 = getRandomInt(minNumber, maxNumber);
   if (RandomSign === '+') {
