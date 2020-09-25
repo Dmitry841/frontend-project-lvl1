@@ -12,7 +12,6 @@ const upperRange = 50;
 const stepOfProgression = 5;
 
 const GenerateNumericalSeries = () => {
-
   const firstNumber = getRandomInt(lowerRange, upperRange);
   const Series = [firstNumber];
   for (let ElementOfSeries = firstIndexOfSeries;
