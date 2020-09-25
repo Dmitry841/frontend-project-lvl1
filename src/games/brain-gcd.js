@@ -19,10 +19,11 @@ const commonDividers = (arrOfDiv1, arrOfDiv2) => {
   return commomDiv;
 };
 
+const lowerRange = 5;
+const upperRange = 50;
+
 const GenerateGCD = () => {
   const resultAndQuestion = [];
-  const lowerRange = 5;
-  const upperRange = 50;
   const number1 = getRandomInt(lowerRange, upperRange);
   const number2 = getRandomInt(lowerRange, upperRange);
   const divOfNumber1 = findAllDividerS(number1);
