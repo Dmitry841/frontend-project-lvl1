@@ -3,7 +3,7 @@ import getRandomInt from '../utils.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
 
-const findAllDividerS = (num) => {
+const findAllDividers = (num) => {
   let div = 1;
   const dividers = [];
   while (div <= num) {
@@ -25,8 +25,8 @@ const upperRange = 50;
 const GenerateData = () => {
   const number1 = getRandomInt(lowerRange, upperRange);
   const number2 = getRandomInt(lowerRange, upperRange);
-  const divOfNumber1 = findAllDividerS(number1);
-  const divOfNumber2 = findAllDividerS(number2);
+  const divOfNumber1 = findAllDividers(number1);
+  const divOfNumber2 = findAllDividers(number2);
   const divOfBothNumbers = commonDividers(divOfNumber1, divOfNumber2);
   return [String(Math.max(...divOfBothNumbers)), `${number1}, ${number2}`];
 };
