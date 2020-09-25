@@ -9,11 +9,9 @@ const isEven = (num) => num % 2 === 0;
   const upperRange = 30;
 
 const generateData = () => {
-  const resultAndAnswer = [];
-  const randomNumber = getRandomInt(lowerRange, upperRange);
-  const result = isEven(randomNumber) ? 'yes' : 'no';
-  resultAndAnswer.push(result, randomNumber);
-  return resultAndAnswer;
+  const question = getRandomInt(lowerRange, upperRange);
+  const correctAnswer = isEven(question) ? 'yes' : 'no';
+  return [correctAnswer, question];
 };
 
 export default () => runGame(task, generateData);
