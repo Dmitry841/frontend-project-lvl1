@@ -6,9 +6,11 @@ const task = 'What number is missing in the progression?';
 const firstIndexOfSeries = 0;
 const lastIndexOfSeries = 9;
 
+const lowerRange = 5;
+const upperRange = 50;
+
 const GenerateNumericalSeries = () => {
-  const lowerRange = 5;
-  const upperRange = 50;
+
   const firstNumber = getRandomInt(lowerRange, upperRange);
   const Series = [firstNumber];
   const stepOfProgression = 5;
