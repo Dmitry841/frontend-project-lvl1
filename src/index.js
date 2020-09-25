@@ -8,8 +8,8 @@ const runGame = (task, expression) => {
   console.log(`Hello, ${userName}!`);
   console.log(task);
   for (let i = 1; i <= numbersOfRounds; i += 1) {
-    const [answer, resultOfExpression] = expression();
-    console.log(`Quastion: ${resultOfExpression}`);
+    const [answer, question] = expression();
+    console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('You answer: ');
     const leaderAnswer = `"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".
     Let's try again, ${userName}!`;
