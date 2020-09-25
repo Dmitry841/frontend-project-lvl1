@@ -19,10 +19,10 @@ const upperRange = 50;
 
 const generateData = () => {
   const resultAndAnswer = [];
-  const randomNumber = getRandomInt(lowerRange, upperRange);
-  const result = isPrimeNumber(randomNumber) ? 'yes' : 'no';
+  const question = getRandomInt(lowerRange, upperRange);
+  const answer = isPrimeNumber(randomNumber) ? 'yes' : 'no';
   resultAndAnswer.push(result, randomNumber);
-  return resultAndAnswer;
+  return [answer, question];
 };
 
 export default () => runGame(task, generateData);
