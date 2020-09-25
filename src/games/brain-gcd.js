@@ -23,13 +23,11 @@ const lowerRange = 5;
 const upperRange = 50;
 
 const GenerateGCD = () => {
-  const resultAndQuestion = [];
   const number1 = getRandomInt(lowerRange, upperRange);
   const number2 = getRandomInt(lowerRange, upperRange);
   const divOfNumber1 = findAllDividerS(number1);
   const divOfNumber2 = findAllDividerS(number2);
   const divOfBothNumbers = commonDividers(divOfNumber1, divOfNumber2);
-  resultAndQuestion.push(String(Math.max(...divOfBothNumbers)), `${number1}, ${number2}`);
-  return resultAndQuestion;
+  return [String(Math.max(...divOfBothNumbers)), `${number1}, ${number2}`)];
 };
 export default () => runGame(task, GenerateGCD);
