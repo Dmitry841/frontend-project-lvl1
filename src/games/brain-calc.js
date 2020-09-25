@@ -15,13 +15,13 @@ const generateCalculate = () => {
   const randomNumber2 = getRandomInt(minNumber, maxNumber);
   if (RandomSign === '+') {
     return [String(randomNumber1 + randomNumber2),
-      `${randomNumber1} + ${randomNumber2}`)];
+      `${randomNumber1} + ${randomNumber2}`];
   } if (RandomSign === '-') {
     return [(String(randomNumber1 - randomNumber2),
-      `${randomNumber1} - ${randomNumber2}`)];
+      `${randomNumber1} - ${randomNumber2}`];
   } else {
     return [(String(randomNumber1 * randomNumber2),
-      `${randomNumber1} * ${randomNumber2}`)];
+      `${randomNumber1} * ${randomNumber2}`];
   }
 };
 
