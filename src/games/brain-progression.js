@@ -23,14 +23,12 @@ const GenerateNumericalSeries = () => {
 };
 
 const GenerateProgression = () => {
-  const resulAndAnswer = [];
   const progression = GenerateNumericalSeries();
   const hiddenIndex = getRandomInt(firstIndexOfSeries, lastIndexOfSeries);
   const copyOfProgression = progression.slice();
   copyOfProgression[hiddenIndex] = '..';
   const toShowProgression = copyOfProgression.join(' ');
-  resulAndAnswer.push(String(progression[hiddenIndex]), toShowProgression);
-  return resulAndAnswer;
+  return [String(progression[hiddenIndex]), toShowProgression];
 };
 
 export default () => runGame(task, GenerateProgression);
