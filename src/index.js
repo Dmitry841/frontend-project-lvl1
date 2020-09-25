@@ -11,12 +11,11 @@ const runGame = (task, expression) => {
     const [answer, question] = expression();
     console.log(`Question: ${question}`);
     const userAnswer = readlineSync.question('You answer: ');
-    const leaderAnswer = `"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".
     Let's try again, ${userName}!`;
     if (answer === userAnswer) {
       console.log('Correct!');
     } if (answer !== userAnswer) {
-      console.log(leaderAnswer);
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${answer}".);
       return;
     }
   }
