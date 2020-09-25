@@ -8,23 +8,21 @@ const task = 'What is the result of the expression?';
 
 const generateCalculate = () => {
   const sign = ['+', '-', '*'];
-  const CalculateAndAnswer = [];
   const beginOfSign = sign[0]; // я думаю, что эта константа отностся к лексическому контексту.
   const endOfSign = sign[sign.length - 1];   // я думаю, что эта константа отностся к лексическому контексту.
   const RandomSign = sign[getRandomInt(beginOfSign, endOfSign)];
   const randomNumber1 = getRandomInt(minNumber, maxNumber);
   const randomNumber2 = getRandomInt(minNumber, maxNumber);
   if (RandomSign === '+') {
-    CalculateAndAnswer.push(String(randomNumber1 + randomNumber2),
-      `${randomNumber1} + ${randomNumber2}`);
+    return [String(randomNumber1 + randomNumber2),
+      `${randomNumber1} + ${randomNumber2}`)];
   } if (RandomSign === '-') {
-    CalculateAndAnswer.push(String(randomNumber1 - randomNumber2),
-      `${randomNumber1} - ${randomNumber2}`);
+    return [(String(randomNumber1 - randomNumber2),
+      `${randomNumber1} - ${randomNumber2}`)];
   } else {
-    CalculateAndAnswer.push(String(randomNumber1 * randomNumber2),
-      `${randomNumber1} * ${randomNumber2}`);
+    return [(String(randomNumber1 * randomNumber2),
+      `${randomNumber1} * ${randomNumber2}`)];
   }
-  return CalculateAndAnswer;
 };
 
 export default () => runGame(task, generateCalculate);
