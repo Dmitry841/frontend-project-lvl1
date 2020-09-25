@@ -14,10 +14,8 @@ const findAllDividers = (num) => {
   }
   return dividers;
 };
-const commonDividers = (arrOfDiv1, arrOfDiv2) => {
-  const commomDiv = arrOfDiv1.filter((div) => arrOfDiv2.includes(div));
-  return commomDiv;
-};
+const getGreatDivider = (arrOfDiv1, arrOfDiv2) => Math.max(...arrOfDiv1
+  .filter((div) => arrOfDiv2.includes(div)));
 
 const lowerRange = 5;
 const upperRange = 50;
@@ -27,7 +25,7 @@ const GenerateData = () => {
   const number2 = getRandomInt(lowerRange, upperRange);
   const divOfNumber1 = findAllDividers(number1);
   const divOfNumber2 = findAllDividers(number2);
-  const divOfBothNumbers = commonDividers(divOfNumber1, divOfNumber2);
-  return [String(Math.max(...divOfBothNumbers)), `${number1}, ${number2}`];
+  return [`${getGreatDivider(divOfNumber1, divOfNumber2)}`,
+    `${number1}, ${number2}`];
 };
 export default () => runGame(task, GenerateData);

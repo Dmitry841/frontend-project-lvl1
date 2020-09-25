@@ -18,10 +18,8 @@ const lowerRange = 5;
 const upperRange = 50;
 
 const generateData = () => {
-  const resultAndAnswer = [];
   const question = getRandomInt(lowerRange, upperRange);
-  const answer = isPrimeNumber(randomNumber) ? 'yes' : 'no';
-  resultAndAnswer.push(result, randomNumber);
+  const answer = isPrimeNumber(question) ? 'yes' : 'no';
   return [answer, question];
 };
 

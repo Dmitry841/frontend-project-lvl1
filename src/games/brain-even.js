@@ -5,8 +5,8 @@ const task = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (num) => num % 2 === 0;
 
-  const lowerRange = 1;
-  const upperRange = 30;
+const lowerRange = 1;
+const upperRange = 30;
 
 const generateData = () => {
   const question = getRandomInt(lowerRange, upperRange);
