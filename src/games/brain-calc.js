@@ -5,9 +5,9 @@ const task = 'What is the result of the expression?';
 
  const minNumber = 1;
  const maxNumber = 10;
+ const sign = ['+', '-', '*'];
 
 const generateData = () => {
-  const sign = ['+', '-', '*'];
   const beginOfSign = sign[0]; // я думаю, что эта константа отностся к лексическому контексту.
   const endOfSign = sign[sign.length - 1];   // я думаю, что эта константа отностся к лексическому контексту.
   const RandomSign = sign[getRandomInt(beginOfSign, endOfSign)];
