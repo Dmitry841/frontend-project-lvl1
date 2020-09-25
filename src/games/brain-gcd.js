@@ -28,6 +28,6 @@ const GenerateData = () => {
   const divOfNumber1 = findAllDividerS(number1);
   const divOfNumber2 = findAllDividerS(number2);
   const divOfBothNumbers = commonDividers(divOfNumber1, divOfNumber2);
-  return [String(Math.max(...divOfBothNumbers)), `${number1}, ${number2}`)];
+  return [String(Math.max(...divOfBothNumbers)), `${number1}, ${number2}`];
 };
 export default () => runGame(task, GenerateData);
