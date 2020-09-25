@@ -1,11 +1,12 @@
 import readlineSync from 'readline-sync';
 
+const numbersOfRounds = 3;
+
 const runGame = (task, expression) => {
   console.log('Welcome');
   const userName = readlineSync.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
   console.log(task);
-  const numbersOfRounds = 3;
   for (let i = 1; i <= numbersOfRounds; i += 1) {
     const [answer, resultOfExpression] = expression();
     console.log(`Quastion: ${resultOfExpression}`);
