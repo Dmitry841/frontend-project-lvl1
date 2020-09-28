@@ -23,10 +23,10 @@ const getCalculate = (num1, num2, statement) => {
 };
 
 const generateData = () => {
-  const RandomSign = signs[getRandomInt(beginOfSign, endOfSign)];
+  const sign = signs[getRandomInt(beginOfSign, endOfSign)];
   const number1 = getRandomInt(minNumber, maxNumber);
   const number2 = getRandomInt(minNumber, maxNumber);
-  return getCalculate(number1, number2, RandomSign);
+  return getCalculate(number1, number2, sign);
 };
 
 export default () => runGame(task, generateData);

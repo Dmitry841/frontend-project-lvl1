@@ -3,19 +3,17 @@ import getRandomInt from '../utils.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
 
-const findAllDividers = (num) => {
-  let div = 1;
+const GetAllDividers = (num) => {
   const dividers = [];
-  while (div <= num) {
+  for (let div = 1; div <= num; div += 1) {
     if ((num) % div === 0) {
       dividers.push(div);
     }
-    div += 1;
   }
   return dividers;
 };
-const getGreatDivider = (arrOfDiv1, arrOfDiv2) => Math.max(...arrOfDiv1
-  .filter((div) => arrOfDiv2.includes(div)));
+const getGreatDivider = (DivNum1, DivNum2) => Math.max(...DivNum1
+  .filter((div) => DivNum2.includes(div)));
 
 const lowerRange = 5;
 const upperRange = 50;
@@ -23,9 +21,9 @@ const upperRange = 50;
 const GenerateData = () => {
   const number1 = getRandomInt(lowerRange, upperRange);
   const number2 = getRandomInt(lowerRange, upperRange);
-  const divOfNumber1 = findAllDividers(number1);
-  const divOfNumber2 = findAllDividers(number2);
-  return [`${getGreatDivider(divOfNumber1, divOfNumber2)}`,
+  const divNumber1 = GetAllDividers(number1);
+  const divNumber2 = GetAllDividers(number2);
+  return [`${getGreatDivider(divNumber1, divNumber2)}`,
     `${number1}, ${number2}`];
 };
 export default () => runGame(task, GenerateData);

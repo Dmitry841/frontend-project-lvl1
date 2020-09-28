@@ -27,7 +27,7 @@ const GenerateProgression = () => {
   const copyOfProgression = progression.slice();
   copyOfProgression[hiddenIndex] = '..';
   const toShowProgression = copyOfProgression.join(' ');
-  return [String(progression[hiddenIndex]), toShowProgression];
+  return [`${progression[hiddenIndex]}`, toShowProgression];
 };
 
 export default () => runGame(task, GenerateProgression);
