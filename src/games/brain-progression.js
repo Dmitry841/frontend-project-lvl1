@@ -13,12 +13,12 @@ const stepOfProgression = 5;
 
 const GenerateNumericalSeries = () => {
   const firstNumber = getRandomInt(lowerRange, upperRange);
-  const Series = [firstNumber];
+  const series = [firstNumber];
   for (let ElementOfSeries = firstIndexOfSeries;
     ElementOfSeries < lastIndexOfSeries; ElementOfSeries += 1) {
-    Series.push(Series[ElementOfSeries] + stepOfProgression);
+    series.push(series[ElementOfSeries] + stepOfProgression);
   }
-  return Series;
+  return series;
 };
 
 const GenerateProgression = () => {
