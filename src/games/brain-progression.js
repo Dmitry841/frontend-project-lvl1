@@ -8,9 +8,6 @@ const lengthOfProgression = 9;
 const lowerRange = 5;
 const upperRange = 50;
 
-const firstNumber = getRandomInt(lowerRange, upperRange);
-const stepOfProgression = getRandomInt(lowerRange, upperRange);
-
 const makeProgression = (firstNum, step) => {
   const progression = [firstNum];
   for (let index = 0; // если остaвить только длину прогрессии(L6), это число не стнет "мaгическим"?
@@ -21,7 +18,8 @@ const makeProgression = (firstNum, step) => {
 };
 
 const generateProgression = () => {
-  const progression = makeProgression(firstNumber, stepOfProgression);
+  const progression = makeProgression(getRandomInt(lowerRange, upperRange),
+    getRandomInt(lowerRange, upperRange));
   const hiddenIndex = getRandomInt(0, lengthOfProgression); // если остaвить только длину(L6)
   const copyOfProgression = progression.slice(); // прогрессии, это число не стнет "мaгическим"?
   copyOfProgression[hiddenIndex] = '..';
