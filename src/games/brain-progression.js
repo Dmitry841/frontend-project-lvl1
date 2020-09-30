@@ -3,31 +3,31 @@ import getRandomInt from '../utils.js';
 
 const task = 'What number is missing in the progression?';
 
-const firstIndexOfSeries = 0;
-const lastIndexOfSeries = 9;
+const lengthOfProgression = 9;
 
 const lowerRange = 5;
 const upperRange = 50;
 
-const stepOfProgression = 5;
+const firstNumber = getRandomInt(lowerRange, upperRange);
+const stepOfProgression = getRandomInt(lowerRange, upperRange);
 
-const GenerateNumericalSeries = () => {
-  const firstNumber = getRandomInt(lowerRange, upperRange);
-  const series = [firstNumber];
-  for (let ElementOfSeries = firstIndexOfSeries;
-    ElementOfSeries < lastIndexOfSeries; ElementOfSeries += 1) {
-    series.push(series[ElementOfSeries] + stepOfProgression);
+const makeProgression = (firstNum, step) => {
+  const progression = [firstNum];
+  for (let index = 0; // если остaвить только длину прогрессии(L6), это число не стнет "мaгическим"?
+    index < lengthOfProgression; index += 1) {
+    progression.push(progression[index] + step);
   }
-  return series;
+  return progression;
 };
 
-const GenerateProgression = () => {
-  const progression = GenerateNumericalSeries();
-  const hiddenIndex = getRandomInt(firstIndexOfSeries, lastIndexOfSeries);
-  const copyOfProgression = progression.slice();
+const generateProgression = () => {
+  const progression = makeProgression(firstNumber, stepOfProgression);
+  const hiddenIndex = getRandomInt(0, lengthOfProgression); // если остaвить только длину(L6)
+  const copyOfProgression = progression.slice(); // прогрессии, это число не стнет "мaгическим"?
   copyOfProgression[hiddenIndex] = '..';
-  const toShowProgression = copyOfProgression.join(' ');
-  return [`${progression[hiddenIndex]}`, toShowProgression];
+  const question = copyOfProgression.join(' ');
+  const answer = String(progression[hiddenIndex]);
+  return [answer, question];
 };
 
-export default () => runGame(task, GenerateProgression);
+export default () => runGame(task, generateProgression);

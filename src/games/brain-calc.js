@@ -9,16 +9,19 @@ const signs = ['+', '-', '*'];
 const beginOfSign = 0;
 const endOfSign = signs.length - 1;
 
-const getCalculate = (num1, num2, statement) => {
-  switch (statement) {
+const calculate = (num1, num2, sign) => {
+  switch (sign) {
     case '+':
-      return [`${num1 + num2}`, `${num1} + ${num2}`];
+      return num1 + num2;
 
     case '-':
-      return [`${num1 - num2}`, `${num1} - ${num2}`];
+      return num1 - num2;
+
+    case '*':
+      return num1 * num2;
 
     default:
-      return [`${num1 * num2}`, `${num1} * ${num2}`];
+      throw new Error(`Unknown sign: '${sign}'!`);
   }
 };
 
@@ -26,7 +29,9 @@ const generateData = () => {
   const sign = signs[getRandomInt(beginOfSign, endOfSign)];
   const number1 = getRandomInt(minNumber, maxNumber);
   const number2 = getRandomInt(minNumber, maxNumber);
-  return getCalculate(number1, number2, sign);
+  const answer = String(calculate(number1, number2, sign));
+  const question = `${number1} ${sign} ${number2}`;
+  return [answer, question];
 };
 
 export default () => runGame(task, generateData);
