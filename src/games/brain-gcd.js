@@ -21,9 +21,9 @@ const upperRange = 50;
 const generateData = () => {
   const number1 = getRandomInt(lowerRange, upperRange);
   const number2 = getRandomInt(lowerRange, upperRange);
-  const divNumber1 = getAllDividers(number1);
-  const divNumber2 = getAllDividers(number2);
-  const answer = String(getGreatDivider(divNumber1, divNumber2));
+  const dividersNumber1 = getAllDividers(number1);
+  const dividersNumber2 = getAllDividers(number2);
+  const answer = String(getGreatDivider(dividersNumber1, dividersNumber2));
   const question = `${number1}, ${number2}`;
   return [answer, question];
 };
