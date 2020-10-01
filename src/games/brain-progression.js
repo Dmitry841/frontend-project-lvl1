@@ -20,7 +20,7 @@ const makeProgression = (firstMember, step) => {
 const generateProgression = () => {
   const firstMember = getRandomInt(lowerRange, upperRange);
   const stepProgression = getRandomInt(lowerRange, upperRange);
-  // Есть смысл создавать константу или сразу функцию getRandomInt вставить в аргумент?
+  // Есть ли смысл создавать константу или сразу функцию getRandomInt вставить в аргумент?
   // Если вставить в аргумент, как-будто читабельность ухудшится.
   const progression = makeProgression(firstMember, stepProgression);
   const hiddenIndex = getRandomInt(0, lengthOfProgression); // если остaвить только длину(L6)
