@@ -10,7 +10,7 @@ const upperRange = 50;
 
 const makeProgression = (firstMember, step) => {
   const progression = [firstMember];
-  for (let index = 0; // если остaвить только длину прогрессии(L6), это число не стнет "мaгическим"?
+  for (let index = 0; // если остaвить только длину прогрессии(L6), это число не станет "мaгическим"?
     index < lengthOfProgression; index += 1) {
     progression.push(progression[index] + step);
   }
