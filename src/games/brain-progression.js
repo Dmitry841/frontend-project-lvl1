@@ -8,7 +8,7 @@ const lengthOfProgression = 9;
 const lowerRange = 5;
 const upperRange = 50;
 
-const makeProgression = (firstNum, step) => {
+const makeProgression = (firstMember, step) => {
   const progression = [firstNum];
   for (let index = 0; // если остaвить только длину прогрессии(L6), это число не стнет "мaгическим"?
     index < lengthOfProgression; index += 1) {
@@ -18,8 +18,9 @@ const makeProgression = (firstNum, step) => {
 };
 
 const generateProgression = () => {
-  const progression = makeProgression(getRandomInt(lowerRange, upperRange),
-    getRandomInt(lowerRange, upperRange));
+  const firstMember = getRandomInt(lowerRange, upperRange); // есть смысл создавать константу или сразу функцию getRandomInt вставить в аргумент?
+  const stepProgression = getRandomInt(lowerRange, upperRange); // то же самое. Если вставить в аргумент, как-будто читабельность ухудшится.
+  const progression = makeProgression(firstMember, stepProgression);
   const hiddenIndex = getRandomInt(0, lengthOfProgression); // если остaвить только длину(L6)
   const copyOfProgression = progression.slice(); // прогрессии, это число не стнет "мaгическим"?
   copyOfProgression[hiddenIndex] = '..';
