@@ -12,8 +12,11 @@ const getAllDividers = (num) => {
   }
   return dividers;
 };
-const getGreatDivider = (dividersNumber1, dividersNumber2) => Math.max(...dividersNumber1
-  .filter((divider) => dividersNumber2.includes(divider)));
+const getGreatDivider = (dividersNumber1, dividersNumber2) => {
+  const commonDividers = dividersNumber1.filter((divider) => dividersNumber2.includes(divider));
+  const greatDivider = Math.max(...commonDividers);
+  return greatDivider;
+};
 
 const lowerRange = 5;
 const upperRange = 50;
