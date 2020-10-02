@@ -3,15 +3,14 @@ import getRandomInt from '../utils.js';
 
 const task = 'What number is missing in the progression?';
 
-const lengthOfProgression = 9;
+const lengthOfProgression = 10;
 
 const lowerRange = 5;
 const upperRange = 50;
 
 const makeProgression = (firstMember, step) => {
   const progression = [firstMember];
-  for (let index = 0; // если остaвить только длину прогрессии(L6), это число не станет "мaгическим"?
-    index < lengthOfProgression; index += 1) {
+  for (let index = 0; index < lengthOfProgression - 1; index += 1) {
     progression.push(progression[index] + step);
   }
   return progression;
@@ -20,11 +19,9 @@ const makeProgression = (firstMember, step) => {
 const generateProgression = () => {
   const firstMember = getRandomInt(lowerRange, upperRange);
   const stepProgression = getRandomInt(lowerRange, upperRange);
-  // Есть ли смысл создавать константу или сразу функцию getRandomInt вставить в аргумент?
-  // Если вставить в аргумент, как-будто читабельность ухудшится.
   const progression = makeProgression(firstMember, stepProgression);
-  const hiddenIndex = getRandomInt(0, lengthOfProgression); // если остaвить только длину(L6)
-  const copyOfProgression = progression.slice(); // прогрессии, это число не стнет "мaгическим"?
+  const hiddenIndex = getRandomInt(0, lengthOfProgression - 1); 
+  const copyOfProgression = progression.slice();
   copyOfProgression[hiddenIndex] = '..';
   const question = copyOfProgression.join(' ');
   const answer = String(progression[hiddenIndex]);
