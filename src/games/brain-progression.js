@@ -20,7 +20,7 @@ const generateProgression = () => {
   const firstMember = getRandomInt(lowerRange, upperRange);
   const stepProgression = getRandomInt(lowerRange, upperRange);
   const progression = makeProgression(firstMember, stepProgression);
-  const hiddenIndex = getRandomInt(0, lengthOfProgression - 1); 
+  const hiddenIndex = getRandomInt(0, lengthOfProgression - 1);
   const copyOfProgression = progression.slice();
   copyOfProgression[hiddenIndex] = '..';
   const question = copyOfProgression.join(' ');
